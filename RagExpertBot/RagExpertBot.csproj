@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove=".env" />
+    <None Remove="A_Simple_Guide_to_Retrieval_Augmented_Ge_v4_MEAP.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include=".env">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Simple_Guide_to_Retrieval_Augmented_Ge_v4_MEAP.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotenv.net" Version="3.2.1" />
+    <PackageReference Include="Microsoft.KernelMemory.Core" Version="0.78.241007.1" />
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.20.0" />
+  </ItemGroup>
+
+</Project>
